@@ -1,0 +1,30 @@
+Write a simple program in SCALA using Apache Spark framework
+
+calculator.scala
+
+object calculator {
+  def main(args: Array[String]){
+    var ch:Char=0;
+    var num1:Int=0
+    var num2:Int=0
+    var result:Int=0
+
+    print("Select operation (+,-,*,/,%): ")
+    ch=scala.io.StdIn.readChar()
+
+    println("Enter num1: ")
+    num1=scala.io.StdIn.readInt()
+
+    println("Enter num2: ")
+    num2=scala.io.StdIn.readInt()
+
+    ch match{
+      case '+' => result=num1+num2
+      case '-' => result=num1-num2
+      case '*' => result=num1*num2
+      case '/' => result=num1/num2
+      case '%' => result=num1%num2
+    }
+    println("Result is "+result)
+  }
+}
